@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="with=device=with, initial-scale=1">
+	<meta name="viewport" content="initial-scale=1">
 	<title>Mini Twitter</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/style.css">
@@ -20,7 +20,7 @@
 					<form id="myform">
 						 <textarea id="comentarea" autofocus="1" rows="4" cols="38">
 						</textarea> 
-						<button class="done" type="submit">Dohne</button>
+						<input class="done" type="submit" value="Dohne">
 					</form>
 				</div>
 
@@ -28,13 +28,18 @@
 				<div class="col-md-8 timelineinfo" >
 					<div class="jumbotron banner">		
 					</div>
-					<div class="comments">
+					<div class="comments" id="comments">
 						<div class="comment">
 							<img src="assets/images/profilepic.jpg" alt="profile" class="commentimg img-responsive">
 							<h3>Homero Jimeno Simpsons</h3>
 							<p>Mi primer tweet, Doh</p>
-							<i class="fas fa-trash-alt basura"></i>
-							<i class="fas fa-heart corazon corazon_likeable"></i>
+							<a href="#">
+								<i class="fas fa-trash-alt basura"></i>
+							</a>
+							<a href="#">
+								<i class="fas fa-heart corazon corazon_likeable"></i>
+							</a>
+							<div id="output">0</div>
 						</div>
 					</div>
 	     		</div>
@@ -49,6 +54,6 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-<script src="js/script.js" type="text-javascript"></script>
+<script src="assets/js/scripts.js" type="text/javascript" async defer></script>
 </body>
 </html>
