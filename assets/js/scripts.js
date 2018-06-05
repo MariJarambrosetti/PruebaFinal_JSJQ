@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	
+	var corazonlike = 0;
 
 	$('#myform').on('submit', function(event){
 	event.preventDefault();
@@ -19,11 +19,22 @@ $(document).ready(function(){
 		$('#comentarea').focus();
 	});
 
-	$('.comments').on('click', '.corazon', function(event){
+	$('#comments').on('click', '.corazon', function(event){
 		event.preventDefault();
 		event.stopPropagation();
 		$(this).toggleClass('corazon_likeable');
-	})
+
+		if ($('.corazon').hasClass('corazon_likeable')) {
+			$('#display').text(corazonlike + 1);
+		} else {
+			$('#display').text(corazonlike);
+		}
+		
+
+	});
+
+	
+
 
 
 
