@@ -1,5 +1,66 @@
 .banner {
-	background-image: url("../images/banner.png");
+	background-image: url("../images/banner.jpg");
 	background-position: center;
 	background-size: cover;
+	border-radius: 4px;
+}
+
+.comentarea {
+	border-radius: 3%;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+}
+
+.homero {
+	border-radius: 50%;
+	max-width: 50%;
+	display: inline;
+}
+
+.profileinfo {
+	text-align: center;
+	padding-top: 100px;
+}
+
+.done {
+	background-color: tomato;
+	margin-top: 10px;
+}
+
+.comments {
+	margin-top: 5px;
+	
+}
+
+.comment {
+	width: 100%;
+	font-family: Tahoma, sans-serif;
+	padding: 0 10em 0 10em;
+	margin-bottom: 60px;
+}
+
+.comment p {
+	float: left;
+}
+
+.comment h3 {
+	margin-top: 0; 
+}
+
+.commentimg {
+	max-width: 13%;
+	border-radius: 50%;
+	float: left;
+	margin-right: 25px;
+}
+
+.corazon, .basura {
+	float: right;
+	margin-right: 10px;
+	color: #cccccc;
+}
+
+.corazon_likeable {
+	color: red;
 }
