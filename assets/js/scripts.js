@@ -1,6 +1,9 @@
 $(document).ready(function(){
 
-	var corazonlike = 0;
+// Variable para el like 
+	// var corazonlike = 0;
+
+// Integración de tweet en row 
 
 	$('#myform').on('submit', function(event){
 	event.preventDefault();
@@ -14,29 +17,35 @@ $(document).ready(function(){
 			'</p>'+
 			'<i class="fas fa-trash-alt basura"></i>'+
 			'<i class="fas fa-heart corazon"></i>'+
+			'<label id="display">0</label>'+
 			'</div>')
 		$('#comentarea').val('');
 		$('#comentarea').focus();
 	});
+
+// Funcion likeable y display de like 
 
 	$('#comments').on('click', '.corazon', function(event){
 		event.preventDefault();
 		event.stopPropagation();
 		$(this).toggleClass('corazon_likeable');
 
-		if ($('.corazon').hasClass('corazon_likeable')) {
-			$('#display').text(corazonlike + 1);
+		if ($(this).hasClass('corazon_likeable')) {
+			$(this).next('#display').text(+1);
 		} else {
-			$('#display').text(corazonlike);
+			$(this).next('#display').text(0);
 		}
-		
-
 	});
+
+
+
 
 	
 
+// Remove del twett
 
-
-
-
+	$('#comments').on('click', '.basura', function(event){
+		event.stopPropagation();
+		$(this).parent().fadeOut();
+	})
 });
